@@ -1,0 +1,107 @@
+.btns{
+    background-color: white;
+    height: 100vh;
+    text-align: center;
+    align-content: center;
+}
+.bn h1{
+    color: gold;
+    align-content: center;
+}
+.bn h3{
+    color: red;
+}
+.bn button{
+    background-color: blue;
+    border-radius: 0 30px;
+    width: 250px;
+    margin-top: 2px;
+    margin-bottom: 15px;
+    height: 12vh;
+}
+
+.non{
+    padding-top: 15px;
+}
+.bons{
+    background-color: rgb(239, 230, 219);
+    width: 90%;
+    margin: auto;
+    display: block;
+    margin-top: 15px;
+}
+.bons h2{
+    padding-top: 15px;
+    padding-bottom: 7px;
+}
+.bons h1{
+    padding-top: 5px;
+    padding-bottom: 19px;
+}
+.bn{
+    margin-bottom: 10px;
+}
+*{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+.nav{
+    display: flex;
+    align-items: center;
+    background-color: antiquewhite;
+    height: 70px;
+    width: auto;
+}
+.list{
+    display: flex;
+    list-style: none;
+    margin-top: 10px;
+}
+
+ a{
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.img img{
+    height: 100px;
+    width: 130px;
+    margin-top: 10px;
+}
+
+.list img{
+    margin-top: -3px;
+    width: 25px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: antiquewhite;
+    border-radius: 15px;
+    width: 63px;
+}
+
+.dropdown-content a {
+    color: black;
+    text-align: center;
+    padding-bottom: 6px;
+    padding-top: 6px;
+    display: block;
+    font-size: 16px;
+}
+
+.dropdown-content a:hover {
+    background-color: rgb(157, 157, 157);
+    border-radius: 25px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.dropdown{
+    margin-right: 30px;
+}
