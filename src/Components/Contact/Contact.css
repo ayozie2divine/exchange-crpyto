@@ -1,80 +1,88 @@
 .con{
     background-color: rgb(94, 92, 92);
-    height: 89.9vh;
+    height: 70vh;
     align-content: center;
     text-align: center;
     color: white;
     width: 100%;
 }
-@media screen and (max-width: 360){
-    .nav{
-        width: 360px;
+/* Base styles (for larger screens) */
+.aa {
+    text-decoration: none;
+    font-size: 1.2rem; /* Default font size */
+    color: black;
+    display: flex;
+    align-items: center;
+  }
+  .aa h4 {
+    font-size: 1.1rem;
+  }
+  
+  /* For Samsung Galaxy S8 and iPhone X */
+  @media screen and (max-width: 375px) {
+    .aa {
+      font-size: 1rem; /* Slightly smaller font for mobile devices */
+      flex-direction: column; /* Stack the text vertically */
+      align-items: flex-start; /* Align items to the left */
+      color: white;
     }
-    .con{
-        width: 360px;
+  
+    .aa h4 {
+      font-size: 0.9rem; /* Adjust the size of the email text for small screens */
+      margin-top: 5px; /* Add space between the label and the email text */
     }
+  }
+  
+  /* For very small screens (below 360px, like Samsung S8's smaller view) */
+  @media screen and (max-width: 360px) {
+    .aa {
+      font-size: 0.9rem; /* Even smaller font for very small screens */
+    }
+  
+    .aa h4 {
+      font-size: 0.8rem; /* Further reduce the font size */
+    }
+  }
     
-}
 body{
     margin: 0;
     padding: 0;
     width: 100%;
     height: 100%;
 }
-.details img{
-    height: 50px;
-    width: 50px;
-}
-.aaa img{
-    height: 30px;
-    width: 50px;
-}
-.details{
-    display: block;
-    width: 0%;
-    margin: auto;
-    line-height: 19vh;
-}
 .a{
-    width: 0%;
     display: flex;
-    margin: auto;
-    line-height: 4vh; 
+    line-height: 5vh; 
+    text-align: center;
+    color: white;
+    padding-left: 35%;
+}
+.aa{
+    color: white;
+    display: flex; 
+    width: 0%;
+    text-align: center;
+    padding-left: 30%;
+    padding-bottom: 3%;
+    padding-top: 3%;
 }
 .details h3{
     color: gold;
     align-self: center;
 }
 
-.aaa{
-    width: 30%;
-    display: flex;
-    margin: auto;
-    line-height: 1px;
-}
-.aa{
-    width: 40%;
-    display: flex;
-    margin: auto;
-    line-height: 4vh;
-}
 
 .aa h4{
     color: gold;
-    padding-left: -40px;
     align-self: center;
 }
 h2{
     line-height: 20px;
-    margin-bottom: 25px;
-}
-.aa img{
-    margin-left: -120px;
+    margin-bottom: 30px;
 }
 .a{
     width: 0%;
     display: flex;
-    margin: auto;
 }
 
 .a h4{
@@ -131,6 +139,7 @@ h2{
 .list{
     display: flex;
     list-style: none;
+    padding: auto;
 }
 
  a{

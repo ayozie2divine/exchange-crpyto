@@ -37,27 +37,30 @@ body{
     margin: auto;
     display: block;
     margin-top: 5%;
+    margin-bottom: 5%;
 }
 
 .abouts{
     background-color: white;
-    margin-top: 60px;
-    height: 89.9vh;
+    height: 100%;
     align-content: center;
     text-align: center;
 }
-.abouts p{
-    background-color: bisque;
+.abouts .p{
+    background-color: antiquewhite;
     line-height: 7vh;
     justify-content: space-around;
     text-wrap: wrap;
     width: 70%;
     margin: auto;
     display: block;
+    height: 50%;
+    margin-top: 2%;
 }
 
 .welcome h1{
     color: red;
+    padding-top: 50px;
 }
 .welcome h2{
     color: blue;
@@ -65,30 +68,31 @@ body{
 }
 .ww{
     padding-top: 20px;
+    height: 100%;
 }
 .www{
     display: flex;
     flex-wrap: wrap;
     gap: 50px;
     justify-content: space-around;
-    margin-top: 50px;
+    background-color: white;
 }
 .www img{
-    width: 350px;
-    height: 500px;
-    border-radius: 0 50px 0 50px;
+    /* width: 350px;
+    height: 500px; */
+    border-radius: 0 20px 0 20px;
 }
 *{
     margin: 0;
     padding: 0;
     width: 100%;
 }
-.nav{
-    display: flex;
-    align-items: center;
-    background-color: antiquewhite;
-    height: 70px;
-    width: 100%;
+.navss{
+  display: flex;
+  align-items: center;
+  background-color: antiquewhite;
+  height: 70px;
+  width: 100%;
 }
 .list{
     display: flex;
@@ -142,3 +146,19 @@ body{
 .dropdown{
     margin-right: 30px;
 } */
+/* Default Styles */
+body {
+    font-family: Arial, sans-serif;
+  }
+  .www img {
+    width: 50%;
+    height: 100%;
+    display: block;
+    transition: opacity 1s ease-in-out;
+    margin-bottom: 10%;
+    margin-top: 10%;
+  }
+  .footers{
+    margin: auto;
+    display: block;
+  }

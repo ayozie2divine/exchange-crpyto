@@ -1,8 +1,5 @@
 import React from 'react'
 import './Contact.css'
-import whatsapp from '../../assets/whatsapp.png'
-import phone1 from '../../assets/phone1.png'
-import gmail from '../../assets/gmail.png'
 import tiktok from '../../assets/tiktok.png'
 import instagram from '../../assets/instagram.png'
 import facebook from '../../assets/facebook.png'
@@ -39,9 +36,9 @@ function Contact() {
             For more information/pending transfer, contact our customer service:
         </h2>
         <div className='details'>
-            <a href="tel:+2348067614968" className='aaa'><img src={phone1} alt="" /><h3>08067614968</h3></a> 
-            <a href="mailto:ayoziewisdom2@gmail.com" className='aa'><img src={gmail} alt="" /><h4>ayoziewisdom2@gmail.com</h4></a>
-            <a href="https://wa.link/94xvpw" className='a'><img src={whatsapp} alt="" /><h4>Whatsapp</h4></a>
+            <a href="tel:+2348067614968" className='a'>Call:<h3>08067614968</h3></a> 
+            <a href="mailto:ayoziewisdom2@gmail.com" className='aa'>Email:<h4>ayoziewisdom2@gmail.com</h4></a>
+            <a href="https://wa.link/94xvpw" className='a'>Whatsapp:<h4>Whatsapp</h4></a>
       </div>
 </div>
       <div class="footers">

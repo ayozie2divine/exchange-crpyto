@@ -45,6 +45,7 @@ body{
 .num{
     color: black;
 }
+
 .socials img{
     width: 80px;
     margin-right: 5px;
@@ -60,8 +61,8 @@ body{
 .footer h2{
     padding-top: 10px;
 }
-.socials{
-    background-color: bisque;
+
+.f{
     margin-top: -20px;
 }
 *{

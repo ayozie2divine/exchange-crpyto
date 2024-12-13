@@ -11,7 +11,7 @@ function Successful() {
           <h1>Registration Successful</h1>
           <p><b>Click on [OK] to continue</b></p>
           <div>
-            <Link to='/Chizzyexchange'>
+            <Link to='/Chizzyexchange/Login'>
             <button type="button" class="okbutton">OK</button>
             </Link>
           </div>

@@ -9,7 +9,7 @@ import home3 from '../../assets/home3.png'
 function About() {
   return (
     <div>
-            <div class="nav">
+            <div class="navs">
 
 <div className='img'>
   <Link to='/Chizzyexchange'>

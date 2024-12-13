@@ -7,10 +7,12 @@ import {
   Box,
   Card,
   CardContent,
+  InputAdornment,
 } from "@mui/material";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { ClipLoader } from "react-spinners";
+import { Visibility, VisibilityOff } from "@mui/icons-material"; // Import eye icons
 
 const RegistrationPage = () => {
   const navigate = useNavigate();
@@ -21,10 +23,10 @@ const RegistrationPage = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
-  const [address, setAddress] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
+  const [showPassword, setShowPassword] = useState(false); // State to toggle password visibility
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -38,7 +40,6 @@ const RegistrationPage = () => {
       email,
       password,
       phoneNumber,
-      address,
     };
 
     try {
@@ -48,11 +49,11 @@ const RegistrationPage = () => {
       );
       console.log("Registration Successful:", response.data);
       setSuccess("Registration processing.... Please wait.");
-      setTimeout(() => navigate("/Chizzyexchange/Login"), 3000);
+      setTimeout(() => navigate("/Chizzyexchange/Register/Signup/Successful"), 3000);
     } catch (err) {
       console.error("Error:", err);
       setError(
-        err.response?.data?.error 
+        err.response?.data?.error
       );
     } finally {
       setLoading(false);
@@ -62,12 +63,13 @@ const RegistrationPage = () => {
   return (
     <Box
       sx={{
-        width : "auto",
+        width: "auto",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
         minHeight: "100vh",
-        background: "white",
+        background: "linear-gradient(to right, rgba(6, 25, 172, 0.84), rgba(58, 213, 234, 0.3), rgba(9, 8, 5, 6.8))",
+        backgroundColor: "antiquewhite",
         padding: 2,
       }}
     >
@@ -77,7 +79,7 @@ const RegistrationPage = () => {
           width: "100%",
           borderRadius: 3,
           boxShadow: 10,
-          paddingRight:4,
+          paddingRight: 4,
         }}
       >
         <CardContent>
@@ -88,25 +90,15 @@ const RegistrationPage = () => {
             gutterBottom
             sx={{ fontWeight: "bold", color: "#333" }}
           >
-            Create Your Account
+          SignUp or Register!!
           </Typography>
           {error && (
-            <Typography
-              color="error"
-              variant="body2"
-              align="center"
-              gutterBottom
-            >
+            <Typography color="error" variant="body2" align="center" gutterBottom>
               {error}
             </Typography>
           )}
           {success && (
-            <Typography
-              color="success"
-              variant="body2"
-              align="center"
-              gutterBottom
-            >
+            <Typography color="success" variant="body2" align="center" gutterBottom>
               {success}
             </Typography>
           )}
@@ -143,11 +135,27 @@ const RegistrationPage = () => {
               <Grid item xs={12}>
                 <TextField
                   label="Password"
-                  type="password"
+                  type={showPassword ? "text" : "password"} // Conditionally toggle password visibility
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   fullWidth
                   required
+                  InputProps={{
+                    endAdornment: (
+                      <InputAdornment position="end">
+                        <Button
+                          onClick={() => setShowPassword(!showPassword)} // Toggle password visibility
+                          sx={{
+                            color: "gray",
+                            padding: "0 10px",
+                            cursor: "pointer",
+                          }}
+                        >
+                          {showPassword ? <VisibilityOff /> : <Visibility />} {/* Eye icon to toggle visibility */}
+                        </Button>
+                      </InputAdornment>
+                    ),
+                  }}
                 />
               </Grid>
               <Grid item xs={12}>
@@ -156,17 +164,6 @@ const RegistrationPage = () => {
                   value={phoneNumber}
                   onChange={(e) => setPhoneNumber(e.target.value)}
                   fullWidth
-                  required
-                />
-              </Grid>
-              <Grid item xs={12}>
-                <TextField
-                  label="Address"
-                  value={address}
-                  onChange={(e) => setAddress(e.target.value)}
-                  fullWidth
-                  multiline
-                  rows={3}
                   required
                 />
               </Grid>
@@ -182,15 +179,26 @@ const RegistrationPage = () => {
                     ":hover": { backgroundColor: "#27a983" },
                   }}
                 >
-                  {loading ? <ClipLoader size={20} color="#fff" /> : "Register"}
+                  {loading ? <ClipLoader size={20} color="blue" /> : "Register"}
                 </Button>
               </Grid>
             </Grid>
             <Link to='/Chizzyexchange/Login'>
-            <Typography variant="h5" component="h3" align="center" paddingTop="17px" gutterBottom>
-           or Login
-        </Typography>
-        </Link>
+              <Typography
+                variant="h5"
+                component="h3"
+                align="center"
+                paddingTop="17px"
+                fontFamily="cursive"
+                gutterBottom
+                sx={{
+                  color: "black",
+                  ":hover": { color: "blue", cursor: "pointer", textDecoration: "underline" },
+                }}
+              >
+                or Login/SignIn
+              </Typography>
+            </Link>
           </form>
         </CardContent>
       </Card>

@@ -3,6 +3,7 @@ import { TextField, Button, Typography, Box } from "@mui/material";
 import axios from "axios";
 import { ClipLoader } from "react-spinners";
 import { Link, useNavigate } from "react-router-dom";
+import { Visibility, VisibilityOff } from "@mui/icons-material"; // Import eye icons
 
 const LoginPage = () => {
   const navigate = useNavigate();
@@ -11,6 +12,7 @@ const LoginPage = () => {
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
+  const [showPassword, setShowPassword] = useState(false); // State to toggle password visibility
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -23,15 +25,12 @@ const LoginPage = () => {
         { email, password }
       );
       console.log("Login Successful:", response);
-      // alert("Login successful!");
-      setTimeout(() => navigate("/Chizzyexchange"),); // Navigate to home after a delay
-
-      // Perform post-login actions like redirecting to a dashboard
+      setTimeout(() => navigate("/Chizzyexchange"), 2000); // Navigate after a delay
     } catch (err) {
       console.error("Error:", err);
       setError(
         err.response?.data?.message ||
-          "Login failed. Please check your credentials or REGISTER"
+          "Email or Password doesnot match."
       );
     } finally {
       setLoading(false);
@@ -45,7 +44,8 @@ const LoginPage = () => {
         justifyContent: "center",
         alignItems: "center",
         minHeight: "100vh",
-        backgroundColor: "#f4f4f9",
+        background: "linear-gradient(to right, rgba(6, 25, 172, 0.84), rgba(58, 213, 234, 0.3), rgba(9, 8, 5, 6.8))",
+        backgroundColor: "antiquewhite",
       }}
     >
       <Box
@@ -53,13 +53,14 @@ const LoginPage = () => {
           width: "100%",
           maxWidth: 400,
           padding: 3,
-          borderRadius: 2,
+          paddingRight: 5,
+          borderRadius: 22,
           backgroundColor: "#fff",
           boxShadow: 3,
         }}
       >
         <Typography variant="h5" component="h1" align="center" gutterBottom>
-          Login
+          Signin or Login!!
         </Typography>
         {error && (
           <Typography color="error" variant="body2" align="center" gutterBottom>
@@ -79,13 +80,26 @@ const LoginPage = () => {
           />
           <TextField
             label="Password"
-            type="password"
+            type={showPassword ? "text" : "password"} // Conditionally toggle password visibility
             fullWidth
             margin="normal"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             required
-            
+            InputProps={{
+              endAdornment: (
+                <Button
+                  onClick={() => setShowPassword(!showPassword)} // Toggle password visibility
+                  sx={{
+                    color: "gray",
+                    padding: "0 10px",
+                    cursor: "pointer",
+                  }}
+                >
+                  {showPassword ? <VisibilityOff /> : <Visibility />} {/* Eye icon to toggle visibility */}
+                </Button>
+              ),
+            }}
           />
           <Box sx={{ mt: 3 }}>
             <Button
@@ -94,14 +108,32 @@ const LoginPage = () => {
               color="primary"
               fullWidth
               disabled={loading}
+              sx={{
+                backgroundColor: "#2ebf91",
+                ":hover": { backgroundColor: "#27a983" },
+              }}
             >
-              {loading ? <ClipLoader /> : "Login"}
+              {loading ? <ClipLoader size={20} color="blue" /> : "Login"}
             </Button>
-            <Link to='/Chizzyexchange/Register/Signup'>
-            <Typography variant="h5" component="h3" align="center"  paddingTop="17px" gutterBottom>
-           or Register
-           </Typography>
-           </Link>
+            <Link
+              to="/Chizzyexchange/Register/Signup"
+              style={{ textDecoration: "none" }}
+            >
+              <Typography
+                variant="h6"
+                component="h3"
+                align="center"
+                paddingTop="17px"
+                fontFamily="cursive"
+                gutterBottom
+                sx={{
+                  color: "black",
+                  ":hover": { color: "blue", cursor: "pointer", textDecoration: "underline" },
+                }}
+              >
+                or Register/SignUp
+              </Typography>
+            </Link>
           </Box>
         </form>
       </Box>
