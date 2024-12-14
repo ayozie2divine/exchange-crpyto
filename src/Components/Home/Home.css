@@ -9,13 +9,12 @@ body .h1{
     justify-content: center;
     border: 0;
     background-color: rgba(0, 0, 0, 0.727);
-    padding-top: 10%;
+    padding-top: 15%;
     width: 50%;
     height: 35vh;
     border-radius: 25px;
     margin: auto;
     display: block;
-    align-content: center;
     margin-top: 10%;
 }
 body{

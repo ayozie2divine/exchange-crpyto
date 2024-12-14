@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
-import { TextField, Button, Typography, Box } from "@mui/material";
+import { TextField, Button, Typography, Box, Grid, InputAdornment } from "@mui/material";
 import axios from "axios";
 import { BounceLoader, ClipLoader } from "react-spinners";
 import { Link, useNavigate } from "react-router-dom";
 import { Visibility, VisibilityOff } from "@mui/icons-material"; // Import eye icons
 import "./Backyard.css";  // Make sure to create the CSS file for the animation
-import chizzy from "../../assets/chizzy.png"
+import chizzy from "../../assets/chizzy.png";
+
 const LoginPage = () => {
   const navigate = useNavigate();
 
@@ -57,27 +58,26 @@ const LoginPage = () => {
       }}
     >
       {pageLoading && (
-  <Box
-    sx={{
-      position: "fixed",
-      top: 0,
-      left: 0,
-      width: "100%",
-      height: "100%",
-      backgroundColor: "rgba(0, 0, 0, 0.5)", // Semi-transparent background
-      display: "flex",
-      justifyContent: "center",
-      alignItems: "center",
-      zIndex: 1000, // Ensure it covers everything
-    }}
-  >
-    <div className="bounce-loader-container">
-      <BounceLoader size={200} color="blue" loading={true} />
-      <img src={chizzy} alt="Chizzy" className="bouncing-image" />
-    </div>
-  </Box>
-)}
-
+        <Box
+          sx={{
+            position: "fixed",
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "100%",
+            backgroundColor: "rgba(0, 0, 0, 0.5)", // Semi-transparent background
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            zIndex: 1000, // Ensure it covers everything
+          }}
+        >
+          <div className="bounce-loader-container">
+            <BounceLoader size={200} color="blue" loading={true} />
+            <img src={chizzy} alt="Chizzy" className="bouncing-image" />
+          </div>
+        </Box>
+      )}
 
       {/* Main Content */}
       {!pageLoading && (
@@ -101,41 +101,45 @@ const LoginPage = () => {
             </Typography>
           )}
           <form onSubmit={handleSubmit}>
-            <TextField
-              id="email"
-              label="Email"
-              type="email"
-              fullWidth
-              margin="normal"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-            />
-<TextField
-  label="Password"
-  type={showPassword ? "text" : "password"} // Conditionally toggle password visibility
-  fullWidth
-  margin="normal"
-  value={password}
-  onChange={(e) => setPassword(e.target.value)}
-  required
-  InputProps={{
-    startAdornment: (
-      <Button
-        onClick={() => setShowPassword(!showPassword)} // Toggle password visibility
-        sx={{
-          width: "0",
-          color: "gray",
-          padding: "0 10px",
-          cursor: "pointer",
-          left: 180,
-        }}
-      >
-        {showPassword ? <VisibilityOff /> : <Visibility />} {/* Eye icon to toggle visibility */}
-      </Button>
-    ),
-  }}
-/>
+            <Grid container spacing={2}>
+              <Grid item xs={11.5}>
+                <TextField
+                  label="Email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  fullWidth
+                  required
+                />
+              </Grid>
+              <Grid item xs={11.5}>
+                <TextField
+                  label="Password"
+                  type={showPassword ? "text" : "password"} // Conditionally toggle password visibility
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  fullWidth
+                  required
+                  InputProps={{
+                    endAdornment: (
+                      <InputAdornment position="end">
+                        <Button
+                          onClick={() => setShowPassword(!showPassword)} // Toggle password visibility
+                          sx={{
+                            width: "0",
+                            color: "gray",
+                            padding: "0 10px",
+                            cursor: "pointer",
+                            left: 80, 
+                          }}
+                        >
+                          {showPassword ? <VisibilityOff /> : <Visibility />} {/* Eye icon to toggle visibility */}
+                        </Button>
+                      </InputAdornment>
+                    ),
+                  }}
+                />
+              </Grid>
+            </Grid>
 
             <Box sx={{ mt: 3 }}>
               <Button
