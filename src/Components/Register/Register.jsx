@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import './Register.css'
 import {
   TextField,
   Button,
@@ -104,7 +105,7 @@ const RegistrationPage = () => {
           )}
           <form onSubmit={handleSubmit}>
             <Grid container spacing={2}>
-              <Grid item xs={12} sm={6}>
+              <Grid item xs={11.5} sm={6}>
                 <TextField
                   label="First Name"
                   value={firstName}
@@ -113,7 +114,7 @@ const RegistrationPage = () => {
                   required
                 />
               </Grid>
-              <Grid item xs={12} sm={6}>
+              <Grid item xs={11.5} sm={5.5}>
                 <TextField
                   label="Last Name"
                   value={lastName}
@@ -122,20 +123,19 @@ const RegistrationPage = () => {
                   required
                 />
               </Grid>
-              <Grid item xs={12}>
+              <Grid item xs={11.5}>
                 <TextField
                   label="Email"
-                  type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   fullWidth
                   required
                 />
               </Grid>
-              <Grid item xs={12}>
+              <Grid item xs={11.5}>
                 <TextField
-                  label="Password"
-                  type={showPassword ? "text" : "password"} // Conditionally toggle password visibility
+                  label={showPassword ? "text" : "password"}
+                   // Conditionally toggle password visibility
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   fullWidth
@@ -143,12 +143,16 @@ const RegistrationPage = () => {
                   InputProps={{
                     endAdornment: (
                       <InputAdornment position="end">
-                        <Button
+                        <Button className="eye2btn"
                           onClick={() => setShowPassword(!showPassword)} // Toggle password visibility
                           sx={{
+                            width: "0",
                             color: "gray",
                             padding: "0 10px",
                             cursor: "pointer",
+                            left: 100, 
+                             // Position the button inside the text field
+                          
                           }}
                         >
                           {showPassword ? <VisibilityOff /> : <Visibility />} {/* Eye icon to toggle visibility */}
@@ -158,7 +162,7 @@ const RegistrationPage = () => {
                   }}
                 />
               </Grid>
-              <Grid item xs={12}>
+              <Grid item xs={11.5}>
                 <TextField
                   label="Phone Number"
                   value={phoneNumber}
@@ -167,7 +171,7 @@ const RegistrationPage = () => {
                   required
                 />
               </Grid>
-              <Grid item xs={12}>
+              <Grid item xs={11.9}>
                 <Button
                   type="submit"
                   variant="contained"

@@ -108,6 +108,7 @@ h2{
 .socials img{
     width: 80px;
     margin-right: 5px;
+    animation: bounce 2s infinite;
 }
 .ig img{
     width: 80px;

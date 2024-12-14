@@ -38,6 +38,7 @@ body{
     display: block;
     margin-top: 5%;
     margin-bottom: 5%;
+    animation: bounce 2s infinite;
 }
 
 .abouts{
