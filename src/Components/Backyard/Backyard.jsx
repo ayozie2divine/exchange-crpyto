@@ -128,7 +128,7 @@ const LoginPage = () => {
           color: "gray",
           padding: "0 10px",
           cursor: "pointer",
-          left: 120,
+          left: 150,
         }}
       >
         {showPassword ? <VisibilityOff /> : <Visibility />} {/* Eye icon to toggle visibility */}
