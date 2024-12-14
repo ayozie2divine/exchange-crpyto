@@ -1,15 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import './Home.css';
-import screen1 from '../../assets/screen1.jpg';
-import screen2 from '../../assets/screen2.jpg';
-import screen3 from '../../assets/screen3.jpg';
-import screen4 from '../../assets/screen4.jpg';
-import screen5 from '../../assets/screen5.jpg';
-import screen6 from '../../assets/screen6.jpg';
-import screen7 from '../../assets/screen7.jpg';
-import screen8 from '../../assets/screen8.jpg';
-import screen9 from '../../assets/screen9.jpg';
-import screen10 from '../../assets/screen10.jpg';
+import btc from '../../assets/btc.jpg'
+import chime from '../../assets/chime.jpg'
+import dollar from '../../assets/dollar.jpg'
+import eth from '../../assets/eth.jpg'
+import goc from '../../assets/goc.jpg'
+import mg from '../../assets/mg.jpg'
+import paypal from '../../assets/paypal.jpg'
+import rg from '../../assets/rg.jpg'
+import steam from '../../assets/steam.jpg'
+import t from '../../assets/t.jpg'
+import wu from '../../assets/wu.jpg'
+import zelle from '../../assets/zelle.jpg'
+
 import tiktok from '../../assets/tiktok.png';
 import instagram from '../../assets/instagram.png';
 import facebook from '../../assets/facebook.png';
@@ -19,16 +22,18 @@ import home3 from '../../assets/home3.png';
 
 const Home = () => {
   const images = [
-    screen1,
-    screen2,
-    screen3,
-    screen4,
-    screen5,
-    screen6,
-    screen7,
-    screen8,
-    screen9,
-    screen10,
+    btc,
+    chime,
+    dollar,
+    eth,
+    goc,
+    mg,
+    paypal,
+    rg,
+    steam,
+    t,
+    wu,
+    zelle,
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -98,7 +103,7 @@ const Home = () => {
           <p>Buy and sell your Gift Cards</p>
           <p>Buy and sell your Bitcoin, Ethereum, Solana, Dogs, $X(X Empire), Memefi, all Crypto tokens and Coins today!!!!</p>
           <p>
-            Make your international and intercontinental transfers to your family, friends, and loved ones today using our tested and trusted Paypals, Venmo, Cash App, Zelle. To all country destinations like (UK, US, Canada, Australia, France, Germany, Mexico, Philippines, Spain, and a lot more)
+            Make your international and intercontinental transfers to your family, friends, and loved ones today using our tested and trusted Paypal, Venmo, Cash App, Zelle. To all country destinations like (UK, US, Canada, Australia, France, Germany, Mexico, Philippines, Spain, and a lot more)
           </p>
           <p>Trade with us today @chizzyexchange and Enjoy the best exchange rates today with high efficiency too......</p>
           </p>

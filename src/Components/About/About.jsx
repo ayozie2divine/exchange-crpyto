@@ -36,7 +36,7 @@ function About() {
         <div className='welcome'><h1>Welcome to Chizzy Exchange</h1>   <h2>[The home of all Digital Exchanges]</h2></div>
       <p>Buy and sell your Gift Cards</p>
       <p>Buy and sell your Bitcoin, Ethereum, Solana, Dogs, $X(X Empire), Memefi, all Crypto tokens and Coins today!!!!</p>
-      <p>Make your international and intercontinental transfers to your family, freinds and loved ones today using our tested and trusted Paypals, Venmo, Cash App, Zelle. To all country destinations like (UK, US, Canada, Australia, France, Germany, Mexico, Philipine, Spain and alot more)</p>
+      <p>Make your international and intercontinental transfers to your family, freinds and loved ones today using our tested and trusted Paypal, Venmo, Cash App, Zelle. To all country destinations like (UK, US, Canada, Australia, France, Germany, Mexico, Philipine, Spain and alot more)</p>
       <p>Trade with us today @chizzyexchange and Enjoy the best exchange rates today with high effeciency too......</p>
       <p>
         <p>

@@ -150,7 +150,7 @@ const RegistrationPage = () => {
                             color: "gray",
                             padding: "0 10px",
                             cursor: "pointer",
-                            left: 100, 
+                            left: 80, 
                              // Position the button inside the text field
                           
                           }}

@@ -54,7 +54,6 @@ const LoginPage = () => {
         alignItems: "center",
         minHeight: "100vh",
         background: "linear-gradient(to right, rgba(6, 25, 172, 0.84), rgba(58, 213, 234, 0.3), rgba(9, 8, 5, 6.8))",
-        backgroundColor: "antiquewhite",
       }}
     >
       {pageLoading && (
@@ -129,8 +128,7 @@ const LoginPage = () => {
           color: "gray",
           padding: "0 10px",
           cursor: "pointer",
-          position: "absolute", // Position the button inside the text field
-          left: 350, // Add some space from the left
+          left: 80,
         }}
       >
         {showPassword ? <VisibilityOff /> : <Visibility />} {/* Eye icon to toggle visibility */}
