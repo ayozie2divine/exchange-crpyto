@@ -76,7 +76,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="body">
+      <div>
         <div className="body1">
           <h1 className="h1">
             <marquee behavior="" direction="">

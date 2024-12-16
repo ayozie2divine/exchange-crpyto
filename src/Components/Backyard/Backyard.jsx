@@ -93,7 +93,7 @@ const LoginPage = () => {
           }}
         >
           <Typography variant="h5" component="h1" align="center" gutterBottom>
-            Signin or Login!!
+            Login!!
           </Typography>
           {error && (
             <Typography color="error" variant="body2" align="center" gutterBottom>
@@ -129,7 +129,7 @@ const LoginPage = () => {
                             color: "gray",
                             padding: "0 10px",
                             cursor: "pointer",
-                            left: 80, 
+                            left: 90, 
                           }}
                         >
                           {showPassword ? <VisibilityOff /> : <Visibility />} {/* Eye icon to toggle visibility */}
@@ -171,7 +171,7 @@ const LoginPage = () => {
                     ":hover": { color: "blue", cursor: "pointer", textDecoration: "underline" },
                   }}
                 >
-                  or Register/SignUp
+                  or Register
                 </Typography>
               </Link>
             </Box>

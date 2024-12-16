@@ -91,7 +91,7 @@ const RegistrationPage = () => {
             gutterBottom
             sx={{ fontWeight: "bold", color: "#333" }}
           >
-          SignUp or Register!!
+          Register!!
           </Typography>
           {error && (
             <Typography color="error" variant="body2" align="center" gutterBottom>
@@ -200,7 +200,7 @@ const RegistrationPage = () => {
                   ":hover": { color: "blue", cursor: "pointer", textDecoration: "underline" },
                 }}
               >
-                or Login/SignIn
+                or Login
               </Typography>
             </Link>
           </form>
