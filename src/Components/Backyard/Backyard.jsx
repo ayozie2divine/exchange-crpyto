@@ -33,7 +33,7 @@ const LoginPage = () => {
       console.error("Error:", err);
       setError(
         err.response?.data?.message ||
-          "Email or Password does not match."
+          "Wrong credentials: Invalid username or password"
       );
     } finally {
       setLoading(false);
