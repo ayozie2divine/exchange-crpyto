@@ -4,7 +4,7 @@ import axios from "axios";
 import { BounceLoader, ClipLoader } from "react-spinners";
 import { Link, useNavigate } from "react-router-dom";
 import { Visibility, VisibilityOff } from "@mui/icons-material"; // Import eye icons
-import "./Backyard.css";  // Make sure to create the CSS file for the animation
+import "./Login.css";  // Make sure to create the CSS file for the animation
 import chizzy from "../../assets/chizzy.png";
 
 const LoginPage = () => {
@@ -33,7 +33,7 @@ const LoginPage = () => {
       console.error("Error:", err);
       setError(
         err.response?.data?.message ||
-          "Wrong credentials: Invalid username or password"
+          "Email or Password doesn't match."
       );
     } finally {
       setLoading(false);
